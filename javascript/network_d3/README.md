@@ -1,7 +1,7 @@
 Sample code for network written in D3.js
 ========================================
 
-=== Written in D3
+### Written in D3
 This is code samples from D3.js in Action.
 
 * [Adjacency highlighting](http://bl.ocks.org/emeeks/391e2cf83a0708c19f8c)
