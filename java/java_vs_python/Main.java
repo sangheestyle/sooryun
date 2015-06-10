@@ -1,3 +1,21 @@
+// 4. Class and inheritance
+class Animal{
+  private String name;
+  public Animal(String name){
+    this.name = name;
+  }
+}
+
+class Dog extends Animal{
+  public Dog(String name) {
+    super(name);
+  }
+
+  public void saySomething(){
+    System.out.print("I can bark");
+  }
+}
+
 public class Main {
   public static void main(String[] args) {
     // 1. Hello World
@@ -32,5 +50,9 @@ public class Main {
 
     for(int i=0; i<10; i++)
       System.out.print(i);
+
+    // 4. Class and inheritance
+    Dog dog = new Dog("Chiwawa");
+    dog.saySomething();
   }
 }
