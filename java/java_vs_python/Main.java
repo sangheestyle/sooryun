@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+
+
 // 4. Class and inheritance
 class Animal{
   private String name;
@@ -54,5 +57,15 @@ public class Main {
     // 4. Class and inheritance
     Dog dog = new Dog("Chiwawa");
     dog.saySomething();
+
+    // 6. Collections
+    ArrayList<String> al = new ArrayList<String>();
+    al.add("a");
+    al.add("b");
+    al.add("c");
+    System.out.println(al);
+
+    for (String s : al)
+      System.out.println(s);
   }
 }
