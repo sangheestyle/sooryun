@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 
 
@@ -20,7 +21,7 @@ class Dog extends Animal{
 }
 
 public class Main {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
     // 1. Hello World
     System.out.println("Hello world");
 
@@ -67,5 +68,26 @@ public class Main {
 
     for (String s : al)
       System.out.println(s);
+
+    // 5. File reader
+    String fileName = "foo.txt";
+    String line = null;
+
+    try {
+      FileReader fileReader = new FileReader(fileName);
+      BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+      while((line = bufferedReader.readLine()) != null) {
+        System.out.println(line);
+      }
+
+      bufferedReader.close();
+    }
+    catch(FileNotFoundException ex) {
+      System.out.println("Unable to open file " + fileName);
+    }
+    catch(IOException ex) {
+      System.out.println("Error reading file " + fileName);
+    }
   }
 }
